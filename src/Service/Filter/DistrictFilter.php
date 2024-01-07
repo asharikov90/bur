@@ -15,4 +15,9 @@ class DistrictFilter extends AbstractFilter
     {
         $queryBuilder->andWhere($queryBuilder->expr()->in('district', $this->prepareValue($value)));
     }
+
+    protected function prepareValue(mixed $value): array
+    {
+        return parent::prepareValue($value);
+    }
 }

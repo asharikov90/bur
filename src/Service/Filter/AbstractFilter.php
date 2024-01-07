@@ -6,6 +6,8 @@ use Doctrine\ORM\EntityManagerInterface;
 
 abstract class AbstractFilter implements FilterInterface
 {
+    protected const string FIELD_PREFIX = 'cadastre';
+
     abstract protected static function getFilterName(): string;
 
     public function __construct(protected readonly EntityManagerInterface $entityManager)
@@ -20,5 +22,10 @@ abstract class AbstractFilter implements FilterInterface
     protected function prepareValue(mixed $value): array
     {
         return is_array($value) ? $value : [$value];
+    }
+
+    protected static function getFieldName(): string
+    {
+        return static::getFilterName();
     }
 }

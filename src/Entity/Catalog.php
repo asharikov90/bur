@@ -28,19 +28,19 @@ class Catalog implements JsonSerializable
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $title = null;
 
-    public const TYPE_FOUND = 1;
+    public const int TYPE_FOUND = 1;
 
-    public const TYPE_REGION = 2;
+    public const int TYPE_REGION = 2;
 
-    public const TYPE_DISTRICT = 3;
+    public const int TYPE_DISTRICT = 3;
 
-    public const TYPE_NOMENCLATURE = 4;
+    public const int TYPE_NOMENCLATURE = 4;
 
-    public const TYPE_PURPOSE = 5;
+    public const int TYPE_PURPOSE = 5;
 
-    public const TYPE_USING = 6;
+    public const int TYPE_USING = 6;
 
-    public const TYPES = [
+    public const array TYPES = [
         self::TYPE_FOUND,
         self::TYPE_REGION,
         self::TYPE_DISTRICT,

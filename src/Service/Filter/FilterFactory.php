@@ -12,7 +12,7 @@ final class FilterFactory
     }
 
     /** @var FilterInterface[] */
-    private const FILTERS = [
+    private const array FILTERS = [
         DistrictFilter::class,
         NomenclatureFilter::class,
         PurposeFilter::class,
